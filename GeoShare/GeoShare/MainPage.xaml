@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GeoShare.MainPage">
+
+    <StackLayout>
+       
+        <Label 
+               Padding="10"
+               Text="GeoShare"
+               FontSize="30"
+               FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+
+        <Button
+            Clicked="Get_Location"
+            Margin="50"
+            CornerRadius="10"
+            BackgroundColor="ForestGreen"
+            Text="Get Location"/>
+
+        <Label
+            x:Name="Latitude"
+           Text="Latitude: " 
+            FontSize="18"
+            HorizontalOptions="CenterAndExpand"/>
+        
+        <Label
+            x:Name="Longitude"
+            Text="Longitude: " 
+            FontSize="18"
+            HorizontalOptions="CenterAndExpand"/>
+        <Label
+            x:Name="Altitude"
+            Text="Altitude: " 
+            FontSize="18"
+            HorizontalOptions="CenterAndExpand"/>
+
+        <Frame
+            Margin="50"
+            CornerRadius="10">
+            
+            <Entry
+            x:Name="Telephone"
+            MaxLength="10"
+            Placeholder="Téléphone"
+            Keyboard="Numeric" 
+            HorizontalTextAlignment="Center"
+           />
+        </Frame>
+
+
+        <Button
+            Clicked="Share_Location"
+            Margin="50"
+            CornerRadius="10"
+            BackgroundColor="#8675C2"
+            Text="Share Location"/>
+    </StackLayout>
+
+</ContentPage>
